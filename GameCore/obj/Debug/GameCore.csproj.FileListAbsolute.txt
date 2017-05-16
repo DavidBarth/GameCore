@@ -1,0 +1,17 @@
+C:\DAVE\GameCore\GameCore\bin\Debug\xunit.abstractions.dll
+C:\DAVE\GameCore\GameCore\bin\Debug\xunit.runner.visualstudio.testadapter.dll
+C:\DAVE\GameCore\GameCore\bin\Debug\xunit.runner.utility.desktop.dll
+C:\DAVE\GameCore\GameCore\bin\Debug\xunit.execution.desktop.dll
+C:\DAVE\GameCore\GameCore\bin\Debug\GameCore.dll.config
+C:\DAVE\GameCore\GameCore\bin\Debug\GameCore.dll
+C:\DAVE\GameCore\GameCore\bin\Debug\GameCore.pdb
+C:\DAVE\GameCore\GameCore\bin\Debug\TechTalk.SpecFlow.dll
+C:\DAVE\GameCore\GameCore\bin\Debug\xunit.assert.dll
+C:\DAVE\GameCore\GameCore\bin\Debug\xunit.core.dll
+C:\DAVE\GameCore\GameCore\bin\Debug\xunit.assert.pdb
+C:\DAVE\GameCore\GameCore\bin\Debug\xunit.assert.xml
+C:\DAVE\GameCore\GameCore\bin\Debug\xunit.core.pdb
+C:\DAVE\GameCore\GameCore\bin\Debug\xunit.core.xml
+C:\DAVE\GameCore\GameCore\obj\Debug\GameCore.csprojResolveAssemblyReference.cache
+C:\DAVE\GameCore\GameCore\obj\Debug\GameCore.dll
+C:\DAVE\GameCore\GameCore\obj\Debug\GameCore.pdb
