@@ -3,7 +3,7 @@
     /// <summary>
     /// Player character class
     /// </summary>
-    class PlayerCharacter
+    public class PlayerCharacter
     {
         public int Health { get; private set; } = 100;
 
