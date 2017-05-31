@@ -6,29 +6,58 @@ namespace GameCore.Specs
     [Binding]
     public class PlayerCharacterSteps
     {
-
         private PlayerCharacter _player;
 
 
-        //using regular expressions we can change method names later due to indireciton in the regex
+        //Arrange
         [Given(@"I'm a new player")]
-        public void GivenImANewPlayer()
+        public void GivenIMANewPlayer()
         {
-            _player = new PlayerCharacter();    
+            _player = new PlayerCharacter();
         }
-
         
-        
+        //Act
         [When(@"I take 0 damage")]
-        public void WhenITake0Damage()
+        public void WhenITakeDamage()
         {
-            _player.HitOnHead(0);
+            _player.Hit(0);
         }
         
+        //Assert
         [Then(@"My health should now be 100")]
-        public void ThenMyHealthShouldNowBe100()
+        public void ThenMyHealthShouldNowBe()
         {
             Assert.Equal(100, _player.Health);
         }
+
+
+        [When(@"I take 40 damage")]
+        public void WhenITake40Damage()
+        {
+            _player.Hit(40);
+        }
+
+        [Then(@"My health should now be 60")]
+        public void ThenMyHealthShouldNowBe60()
+        {
+            Assert.Equal(60, _player.Health);
+        }
+
+        [When(@"I take 100 damage")]
+        public void WhenITake100Damage()
+        {
+            _player.Hit(100);
+        }
+
+        [Then(@"I should be dead")]
+        public void ThenIShouldBeDead()
+        {
+            Assert.Equal(true, _player.IsDead);
+        }
+
+
+
+
+
     }
 }

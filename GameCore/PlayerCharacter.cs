@@ -13,7 +13,7 @@
         /// decrements health by the amount of damage
         /// </summary>
         /// <param name="damage"></param>
-        public void HitOnHead(int damage)
+        public void Hit(int damage)
         {
             Health -= damage;
 
@@ -21,44 +21,7 @@
                 IsDead = true;
         }
 
-        /// <summary>
-        /// decrements health by the amount of damage
-        /// </summary>
-        /// <param name="damage"></param>
-        public void HitOnBody(int damage)
-        {
-            Health -= damage;
-
-            if (Health <= 0)
-                IsDead = true;
-
-        }
-
-        /// <summary>
-        /// decrements health by the amount of damage
-        /// </summary>
-        /// <param name="damage"></param>
-        public void HitOnArm(int damage)
-        {
-            Health -= damage;
-
-            if (Health <= 0)
-                IsDead = true;
-
-        }
-
-        /// <summary>
-        /// decrements health by the amount of damage
-        /// </summary>
-        /// <param name="damage"></param>
-        public void HitOnLeg(int damage)
-        {
-            Health -= damage;
-
-            if (Health <= 0)
-                IsDead = true;
-
-        }
+        
 
         
     }
