@@ -12,9 +12,17 @@ Scenario Outline: Health reduction
 	| damage | expectedHealth |
 	| 0      | 100            |
 	| 40     | 60             |
+	| 50     | 50             |
 
 
 Scenario: Taking too much damae results in player death
 	Given I'm a new player
 	When I take 100 damage 
 	Then I should be dead
+
+Scenario: Elf race characters get additional 20 damage resistance
+	Given I'm a new player
+		And I have a damage resistance of 10
+		And I'm an Elf
+	When I take 40 damage
+	Then My health should now be 90

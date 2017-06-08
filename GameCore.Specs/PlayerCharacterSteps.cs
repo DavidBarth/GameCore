@@ -16,7 +16,7 @@ namespace GameCore.Specs
             _player = new PlayerCharacter();
         }
         
-
+        //Act
         [When(@"I take (.*) damage")]
         public void WhenITakeDamage(int damage)
         {
@@ -25,19 +25,12 @@ namespace GameCore.Specs
 
                
         //Assert
-        [Then(@"My health should now be 100")]
-        public void ThenMyHealthShouldNowBe()
+        [Then(@"My health should now be (.*)")]
+        public void ThenMyHealthShouldNowBe(int expectedHealth)
         {
-            Assert.Equal(100, _player.Health);
+            Assert.Equal(expectedHealth, _player.Health);
         }
 
-
-        //Assert
-        [Then(@"My health should now be 60")]
-        public void ThenMyHealthShouldNowBe60()
-        {
-            Assert.Equal(60, _player.Health);
-        }
 
         //Assert
         [Then(@"I should be dead")]
@@ -47,6 +40,20 @@ namespace GameCore.Specs
         }
 
 
+        [Given(@"I have a damage resistance of (.*)")]
+        public void GivenIHaveADamageResistanceOf(int damageResistance)
+        {
+            _player.DamageResistance = damageResistance;
+        }
+      
+
+        [Given(@"I'm an Elf")]
+        public void GivenIMAnElf()
+        {
+            _player.Race = "Elf";
+        }
+
+      
 
 
 

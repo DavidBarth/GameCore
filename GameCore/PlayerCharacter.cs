@@ -30,7 +30,7 @@ namespace GameCore
             //additional damage resistance
             if (Race == "Elf")
             {
-                DamageResistance = 20;
+                raceSpecificDamageResistance = 20;
             }
 
             var totalDamageTaken =
