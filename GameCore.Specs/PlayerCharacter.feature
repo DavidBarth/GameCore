@@ -26,3 +26,18 @@ Scenario: Elf race characters get additional 20 damage resistance
 		And I'm an Elf
 	When I take 40 damage
 	Then My health should now be 90
+
+Scenario: Elf race characters get additional 20 damage resistance using data table
+	Given I'm a new player
+		And I have the following attributes
+		| attribute       | value  |
+		| damageResistance| 10     |
+		| race		      | Elf    |
+	When I take 40 damage
+	Then My health should now be 90
+
+
+	
+	
+	
+	

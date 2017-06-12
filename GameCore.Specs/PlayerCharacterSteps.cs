@@ -1,4 +1,5 @@
-﻿using TechTalk.SpecFlow;
+﻿using System.Linq;
+using TechTalk.SpecFlow;
 using Xunit;
 
 namespace GameCore.Specs
@@ -43,17 +44,30 @@ namespace GameCore.Specs
         [Given(@"I have a damage resistance of (.*)")]
         public void GivenIHaveADamageResistanceOf(int damageResistance)
         {
-            _player.DamageResistance = damageResistance;
+            _player.DamageResistance = damageResistance;    //automation code
         }
       
 
         [Given(@"I'm an Elf")]
         public void GivenIMAnElf()
         {
-            _player.Race = "Elf";
+            _player.Race = "Elf";   //automation code
         }
 
-      
+
+        [Given(@"I have the following attributes")]
+        public void GivenIHaveTheFollowingAttributes(Table table) //Table class from SF
+        {
+            //using LINQ to get the first row where attribute equals the given attribute and grabbing the value
+            var damageResistance = table.Rows.First(row => row["attribute"] == "damageResistance")["value"];
+            var race = table.Rows.First(row => row["attribute"] == "race")["value"];
+
+            _player.DamageResistance = int.Parse(damageResistance); //table value are string type
+            _player.Race = race;
+
+        }
+
+
 
 
 
