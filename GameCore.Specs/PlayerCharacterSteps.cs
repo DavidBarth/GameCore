@@ -1,5 +1,5 @@
-﻿using System.Linq;
-using TechTalk.SpecFlow;
+﻿using TechTalk.SpecFlow;
+using TechTalk.SpecFlow.Assist;
 using Xunit;
 
 namespace GameCore.Specs
@@ -59,11 +59,16 @@ namespace GameCore.Specs
         public void GivenIHaveTheFollowingAttributes(Table table) //Table class from SF
         {
             //using LINQ to get the first row where attribute equals the given attribute and grabbing the value
-            var damageResistance = table.Rows.First(row => row["attribute"] == "damageResistance")["value"];
-            var race = table.Rows.First(row => row["attribute"] == "race")["value"];
+            //var damageResistance = table.Rows.First(row => row["attribute"] == "damageResistance")["value"];
+            //var race = table.Rows.First(row => row["attribute"] == "race")["value"];
 
-            _player.DamageResistance = int.Parse(damageResistance); //table value are string type
-            _player.Race = race;
+            //SF automaps table data to an instance of this PlayerAttributes class
+            var attributes = table.CreateInstance<PlayerAttributes>();
+
+            
+
+            _player.DamageResistance = attributes.DamageResistance; 
+            _player.Race = attributes.Race;
 
         }
 
