@@ -63,9 +63,9 @@ namespace GameCore.Specs
             //var race = table.Rows.First(row => row["attribute"] == "race")["value"];
 
             //SF automaps table data to an instance of this PlayerAttributes class
-            var attributes = table.CreateInstance<PlayerAttributes>();
+            //var attributes = table.CreateInstance<PlayerAttributes>();
 
-            
+             dynamic attributes = table.CreateDynamicInstance();
 
             _player.DamageResistance = attributes.DamageResistance; 
             _player.Race = attributes.Race;

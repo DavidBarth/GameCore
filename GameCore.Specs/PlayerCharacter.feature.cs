@@ -156,10 +156,10 @@ this.FeatureBackground();
                         "attribute",
                         "value"});
             table1.AddRow(new string[] {
-                        "damageResistance",
+                        "DamageResistance",
                         "10"});
             table1.AddRow(new string[] {
-                        "race",
+                        "Race",
                         "Elf"});
 #line 31
   testRunner.And("I have the following attributes", ((string)(null)), table1, "And ");
