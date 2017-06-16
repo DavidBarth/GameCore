@@ -68,6 +68,17 @@ namespace GameCore.Specs
         }
 
 
+        [Given(@"My character class is set (.*)")]
+        public void GivenMyCharacterClassIsSetHealer(CharacterClass characterClass)
+        {
+            _player.CharacterClass = characterClass;
+        }
+
+        [When(@"Cast a healing spell")]
+        public void WhenCastAHealingSpell()
+        {
+            _player.CastHealingSpell();
+        }
 
 
 
